@@ -9,13 +9,13 @@ function useWindowSizeStickyNavigation(sectionRef, headerRef, thresholdValue) {
       headerRef.current.classList.remove(".sticky");
     }
   };
-  const headerObserver = new IntersectionObserver(stickyNav, {
+  const sectionObserver = new IntersectionObserver(stickyNav, {
     root: null,
     threshold: thresholdValue,
   });
   React.useEffect(() => {
-    headerObserver.observe(sectionRef.current);
-    return () => headerObserver.unobserve(sectionRef.current);
+    sectionObserver.observe(sectionRef.current);
+    return () => sectionObserver.unobserve(sectionRef.current);
   }, []);
 }
 
