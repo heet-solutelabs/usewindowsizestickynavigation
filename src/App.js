@@ -1,12 +1,12 @@
 import React from "react";
-import useWindowSizeSticky from "./hooks/useWindowSizeSticky";
+import useWindowSizeStickyNavigation from "./hooks/useWindowSizeStickyNavigation";
 import "./App.css";
 
 function App() {
   let sectionRef = React.useRef(null);
   let headerRef = React.useRef(null);
   let thresholdValue = 0;
-  useWindowSizeSticky(sectionRef, headerRef, thresholdValue);
+  useWindowSizeStickyNavigation(sectionRef, headerRef, thresholdValue);
   return (
     <div>
       <header ref={headerRef} />
