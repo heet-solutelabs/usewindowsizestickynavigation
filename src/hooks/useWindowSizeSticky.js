@@ -1,6 +1,6 @@
 import React from "react";
 
-function useWindowSizeSticky(sectionRef, headerRef, thresholdValue) {
+function useWindowSizeStickyNavigation(sectionRef, headerRef, thresholdValue) {
   const stickyNav = (entries) => {
     const [sticky] = entries;
     if (sticky.isIntersecting) {
@@ -19,4 +19,4 @@ function useWindowSizeSticky(sectionRef, headerRef, thresholdValue) {
   }, []);
 }
 
-export default useWindowSizeSticky;
+export default useWindowSizeStickyNavigation;
