@@ -15,6 +15,7 @@ function useWindowSizeSticky(sectionRef, headerRef, thresholdValue) {
   });
   React.useEffect(() => {
     headerObserver.observe(sectionRef.current);
+    return () => headerObserver.unobserve(sectionRef.current);
   }, []);
 }
 
